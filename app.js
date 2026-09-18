@@ -900,6 +900,8 @@
     if(siteNav) siteNav.classList.toggle('scrolled', window.scrollY > 20);
   }, {passive:true});
   backTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+  const footerTop = document.getElementById('footerTop');
+  if(footerTop) footerTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
 
   /* ===== LOGO / HOME =====
      at home -> reload ; not at home -> go home (top) */
