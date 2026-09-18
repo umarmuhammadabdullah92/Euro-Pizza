@@ -900,8 +900,6 @@ ICONS.RP=ICONS.PZ; ICONS.SP=ICONS.PZ; ICONS.CS=ICONS.PZ; ICONS.HH=ICONS.PZ;
     if(siteNav) siteNav.classList.toggle('scrolled', window.scrollY > 20);
   }, {passive:true});
   backTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
-  const footerTop = document.getElementById('footerTop');
-  if(footerTop) footerTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
 
   /* ===== SOCIAL LINKS =====
      The real URLs live directly in the footer HTML so each link opens instantly.

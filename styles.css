@@ -588,15 +588,7 @@
   .footer-brand{ display:flex; align-items:center; gap:14px; margin-bottom:26px; }
   footer .footer-logo{ flex:0 0 auto; }
   footer .footer-logo .logo-badge img{ filter:drop-shadow(0 4px 14px rgba(0,0,0,0.35)); }
-  footer .footer-brand{ display:flex; align-items:center; justify-content:space-between; width:100%; margin-bottom:32px; }
-  .footer-top-btn{
-    flex:none; width:44px; height:44px; border-radius:50%;
-    background:var(--surface); color:var(--ink); border:1px solid var(--line); box-shadow:var(--shadow);
-    display:flex; align-items:center; justify-content:center; cursor:pointer;
-    transition:transform .3s cubic-bezier(.4,0,.2,1), background .2s, color .2s;
-  }
-  .footer-top-btn:hover{ transform:translateY(-4px); background:var(--primary); color:#fff; border-color:var(--primary); }
-  @media(min-width:480px){ .footer-top-btn{ width:48px; height:48px; } }
+  footer .footer-brand{ display:flex; align-items:center; margin-bottom:32px; }
   footer .footer-logo .logo-badge{ width:72px; height:72px; }
   @media(min-width:680px){ footer .footer-logo .logo-badge{ width:84px; height:84px; } }
   footer .footer-logo .logo-text .euro{
