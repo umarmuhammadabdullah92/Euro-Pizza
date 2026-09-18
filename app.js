@@ -127,7 +127,7 @@
   const SOCIAL = {
     facebook: '',
     instagram: '',
-    tiktok: '',
+    tiktok: 'https://www.tiktok.com/@euro.pizza31',
     whatsapp: '',
     youtube: ''
   };
