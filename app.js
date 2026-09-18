@@ -120,17 +120,7 @@
     PL:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="14" rx="9" ry="4"/><path d="M12 10V5"/><path d="M9 5h6"/><path d="M3 14v2c0 2.2 4 4 9 4s9-1.8 9-4v-2"/></svg>',
     PZ:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="10" cy="8.5" r="1" fill="currentColor" stroke="none" opacity="0.5"/><circle cx="15" cy="10.5" r="1" fill="currentColor" stroke="none" opacity="0.5"/><circle cx="9.5" cy="14" r="1" fill="currentColor" stroke="none" opacity="0.5"/><circle cx="14.5" cy="15" r="0.8" fill="currentColor" stroke="none" opacity="0.4"/></svg>'
   };
-  ICONS.RP=ICONS.PZ; ICONS.SP=ICONS.PZ; ICONS.CS=ICONS.PZ; ICONS.HH=ICONS.PZ;
-
-  /* ===== SOCIAL LINKS =====
-     Add your profile/order links below. Leaving one empty hides its icon. */
-  const SOCIAL = {
-    facebook: '',
-    instagram: '',
-    tiktok: 'https://www.tiktok.com/@euro.pizza31',
-    whatsapp: '',
-    youtube: ''
-  };
+ICONS.RP=ICONS.PZ; ICONS.SP=ICONS.PZ; ICONS.CS=ICONS.PZ; ICONS.HH=ICONS.PZ;
 
   /* ===== CART STATE ===== */
   const CART_KEY = 'euro-pizza-cart';
@@ -913,11 +903,11 @@
   const footerTop = document.getElementById('footerTop');
   if(footerTop) footerTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
 
-  /* ===== SOCIAL LINKS ===== */
+  /* ===== SOCIAL LINKS =====
+     The real URLs live directly in the footer HTML so each link opens instantly.
+     This hides any icon that hasn't got a link yet (href="#" placeholder). */
   document.querySelectorAll('[data-social]').forEach(el=>{
-    const url = SOCIAL[el.dataset.social];
-    if(url){ el.href = url; }
-    else { el.style.display = 'none'; }
+    if(el.getAttribute('href') === '#' || el.getAttribute('href') === '') el.style.display = 'none';
   });
 
   /* ===== LOGO / HOME =====
