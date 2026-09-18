@@ -122,6 +122,16 @@
   };
   ICONS.RP=ICONS.PZ; ICONS.SP=ICONS.PZ; ICONS.CS=ICONS.PZ; ICONS.HH=ICONS.PZ;
 
+  /* ===== SOCIAL LINKS =====
+     Add your profile/order links below. Leaving one empty hides its icon. */
+  const SOCIAL = {
+    facebook: '',
+    instagram: '',
+    tiktok: '',
+    whatsapp: '',
+    youtube: ''
+  };
+
   /* ===== CART STATE ===== */
   const CART_KEY = 'euro-pizza-cart';
   const CART_META_KEY = 'euro-pizza-cart-meta';
@@ -902,6 +912,13 @@
   backTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
   const footerTop = document.getElementById('footerTop');
   if(footerTop) footerTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+  /* ===== SOCIAL LINKS ===== */
+  document.querySelectorAll('[data-social]').forEach(el=>{
+    const url = SOCIAL[el.dataset.social];
+    if(url){ el.href = url; }
+    else { el.style.display = 'none'; }
+  });
 
   /* ===== LOGO / HOME =====
      at home -> reload ; not at home -> go home (top) */
